@@ -2,21 +2,6 @@ import React, { Component } from 'react';
 
 class LikedUsers extends Component {
    
-  getUser(){
-    let usr = '';
-    const userid = Number(this.props.profileUserid);
-    const users = this.props.users;
-     console.log(users);
-   	Object.keys(users).forEach(function (k) {
-    	
-     	if(userid === users[k].id){
-      	usr = `<li key=${k}>${users[k].name}</li>`
-     }
-  }); 
-    
-    return usr;
-  }
-
   render(){
     const { users, usersWhoLikedMovie, movieInfo } = this.props;
     return (
