@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FavoriteMovies from './FavoriteMovies';
 import logo from './logo.svg';
 import './App.css';
 
@@ -97,6 +98,7 @@ const movies = {
   },
 };
 
+
 class App extends Component {
   render() {
     return (
@@ -106,6 +108,7 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
+		<FavoriteMovies movies={movies} profiles={profiles} users={users} />
       </div>
     );
   }
